@@ -51,3 +51,4 @@ if a.is_integer():
     print(f"{a} là số nguyên")
 else:
     print(f"{a} không phải sô nguyên")
+    
