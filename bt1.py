@@ -4,19 +4,19 @@
 # print(a,b,c)
 
 
-# a=int(input("nhap so phan tu :"))
-# arr=[]
-# for i in range(a):
-#     ptu=int(input(f"nhap phan tu thu {i+1}:"))
-#     arr.append(ptu)
-# if len(arr) < 2:
-#     print("ko tim thay")
-# else:
-#     solon = sorted(set(arr), reverse=True)
-#     if len(solon) < 2:
-#         print("ko tim thay")
-#     else:
-#         print("so lon t2 la =", solon[1])
+a=int(input("nhap so phan tu :"))
+arr=[]
+for i in range(a):
+    ptu=int(input(f"nhap phan tu thu {i+1}:"))
+    arr.append(ptu)
+if len(arr) < 2:
+    print("ko tim thay")
+else:
+    solon = sorted(set(arr), reverse=True)
+    if len(solon) < 2:
+        print("ko tim thay")
+    else:
+        print("so lon t2 la =", solon[1])
 
 
 # class HinhChuNhat:
@@ -33,7 +33,6 @@
 # class HinhVuong(HinhChuNhat):
 #     def __init__(self, canh):
 #         super().__init__(canh, canh)
-
 # a=int(input("nhap cd:"))
 # b=int(input("nhap cr:"))
 # c=int(input("nhap canh:"))
@@ -46,8 +45,8 @@
 
 
 
-a = float(input("nhap so: "))
-if a.is_integer():
-    print(f"{a} là số nguyên")
-else:
-    print(f"{a} không phải sô nguyên")
+# a = float(input("nhap so: "))
+# if a.is_integer():
+#     print(f"{a} là số nguyên")
+# else:
+#     print(f"{a} không phải sô nguyên")
