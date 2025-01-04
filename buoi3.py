@@ -40,11 +40,8 @@ def timkiemnp(arr, b):
     return -1
 arr=input_array()
 b=int(input("nhap gia tri can tim:"))
-ket_qua=timkiemnp(arr,b)
-if ket_qua != -1:
-    print(f"Giá trị {b} được tìm thấy tại vị trí {ket_qua}.")
-else:
-    print(f"Giá trị {b} không tồn tại trong mảng.")
+print(timkiemnp(arr,b))
+
 
 
 

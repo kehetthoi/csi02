@@ -4,7 +4,6 @@
 # for i in range(a):
 #     ptu = int(input(f"ptu thu {i + 1} la: "))
 #     list.append(ptu)
-
 # def selection(arr):
 #     for i in range(len(arr)):
 #         nho = i
