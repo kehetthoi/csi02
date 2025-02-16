@@ -1,0 +1,77 @@
+<!-- #4. 
+# HTML là ngôn ngữ đánh dấu siêu văn bản được sử dụng để tạo cấu trúc và nội dung của trang web.
+# CSS là ngôn ngữ định dạng được sử dụng để thiết lập kiểu, màu sắc, font chữ, và bố cục của trang web.
+# JavaScript là ngôn ngữ lập trình dùng để tạo các tương tác động trên trang web.
+#5.
+# .highlight {
+#     color: red;
+#     font-weight: bold;
+# }
+#6.Sử dụng API từ Fake Store API. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-item h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .product-item p {
+            font-size: 1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <div id="product-list" class="product-grid"></div>
+
+    <script>
+        async function fetchProducts() {
+            try {
+                const response = await fetch('https://fakestoreapi.com/products');
+                const products = await response.json();
+                displayProducts(products);
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        }
+
+        function displayProducts(products) {
+            const productList = document.getElementById('product-list');
+            products.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.innerHTML = `
+                    <img src="${product.image}" alt="${product.title}">
+                    <h2>${product.title}</h2>
+                    <p>$${product.price}</p>
+                `;
+                productList.appendChild(productItem);
+            });
+        }
+
+        fetchProducts();
+    </script>
+</body>
+</html>
+
+

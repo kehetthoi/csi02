@@ -16,7 +16,7 @@ else:
     if len(solon) < 2:
         print("ko tim thay")
     else:
-        print("so lon t2 la =", solon[1])
+        print("so lon t2 la =", solon)
 
 
 # class HinhChuNhat:
